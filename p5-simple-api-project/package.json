@@ -1,0 +1,19 @@
+{
+  "name": "p5-simple-api-project",
+  "version": "1.0.0",
+  "description": "zelthy-frontend-assignment",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ComputerGeekNerd/jspro.git"
+  },
+  "author": "Raksha Aasish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ComputerGeekNerd/jspro/issues"
+  },
+  "homepage": "https://github.com/ComputerGeekNerd/jspro#readme"
+}

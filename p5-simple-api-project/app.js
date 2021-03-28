@@ -8,24 +8,24 @@ async function getUsers() {
      }
 }
 
-async function getUserAvatar(username) {
-     let url = 'https://avatars.dicebear.com/v2/avataaars/'+username+'.svg?mood[]=happy';
-     try {
-         let res = await fetch(url);
-         return await res.json();
-     } catch (error) {
-         console.log(error);
-     }
-}
+// async function getUserAvatar(username) {
+//      let url = 'https://avatars.dicebear.com/v2/avataaars/'+username+'.svg?mood[]=happy';
+//      try {
+//          let res = await fetch(url);
+//          return await res.json();
+//      } catch (error) {
+//          console.log(error);
+//      }
+// }
 
 function showloader() {
-     // var loader = document.getElementById('loader');
-     // if (loader.classList.contains("hideloading"))
-     //      loader.classList.remove("hideloading")
+     var loader = document.getElementById('loader');
+     if (loader.classList.contains("hideloading"))
+          loader.classList.remove("hideloading")
 }
 
 function hideloader() {
-     //document.getElementById('loader').classList.add("hideloading");
+     document.getElementById('loader').classList.add("hideloading");
 }
 
 function heartClick() {
@@ -33,6 +33,7 @@ function heartClick() {
 }
 
 function editDetails() {
+
 
 }
 
@@ -48,38 +49,54 @@ async function renderUsers() {
      users.forEach(user => {
           showloader();
           let userAvatarUrl = 'https://avatars.dicebear.com/v2/avataaars/'+user.username+'.svg?mood[]=happy';
-          hideloader();
           let htmlSegment = 
                `
-               <div class="card">
-                    <div class="row">
-                         <img src=${userAvatarUrl} class="card-img-top bg-light" style="">
-                    </div>
+               <div class="user">
+                    <img src=${userAvatarUrl} class="card-img-top bg-light" style=""><br><br>
+                    
                     <div class="card-body">
-                         <h5 class="card-title"><b>${user.name}</b></h5>
-                         <p class="card-text">📧 ${user.email}</p>
-                         <p class="card-text">📞 ${user.phone}</p>
-                         <p class="card-text">🌐 ${user.website}</p>
-                    </div>
-                    <div class="card-footer">
-                         <div class="row">
-                              <button type="button" class="btn btn-light col-md" onclick="heartClick">
-                                   ❤️
-                              </button>
-                              <button type="button" class="btn btn-light col-md" onclick="editDetails">
-                                   🖉
-                              </button>
-                              <button type="button" class="btn btn-light col-md" onclick="deleteDetails">
-                                   🗑️
-                              </button>
+                         <h5 class="card-title"><b>${user.name}</b></h5><br>
+                         <div>
+                              <p style="display:flex;">
+                              <span class="material-icons">email</span> 
+                              ${user.email}
+                              </p>
                          </div>
+                         
+                         <div>
+                              <p style="display:flex;">
+                              <span class="material-icons">local_phone</span> 
+                              ${user.phone}
+                              </p>
+                         </div>
+
+                         <div>
+                              <p style="display:flex;">
+                              <span class="material-icons">language</span> 
+                              ${user.website}
+                              </p>
+                         </div>
+
+                    </div>
+                    <br>
+                    <div style="display:flex;">
+                         <button class="heart" onclick="heartClick">
+                              <span class="material-icons">favorite_border</span>
+                         </button>
+                         <button class="edit" onclick="editDetails">
+                              <span class="material-icons">edit</span>
+                         </button>
+                         <button class="delete" onclick="deleteDetails">
+                              <span class="material-icons">delete</span>
+                         </button>
                      </div>
                </div>`;
           
           html += htmlSegment;
+          hideloader();
      });
  
-     let container = document.querySelector('.card-columns');
+     let container = document.querySelector('.container');
      container.innerHTML = html;
  }
  

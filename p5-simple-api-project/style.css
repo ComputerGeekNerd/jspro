@@ -1,19 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:wght@400;700&display=swap');
+
 * {
      box-sizing: border-box;
      margin: 0;
      padding: 0;
-     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 
-/* .card-columns {
-     @include media-breakpoint-only(lg) {
-       column-count: 4;
-     }
-     @include media-breakpoint-only(xl) {
-       column-count: 5;
-     }
-   } */
+.users {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; align-items: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.users .container {
+  max-width: 1440px;
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+}
+
+.user {
+  padding: 30px 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 10px;
+}
+
+.card-img-top {
+  background-color: rgba(211, 211, 211, 0.973);
+}
+
+@media (max-width:1100px) {
+  .users .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width:920px) {
+  .users .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width:715px) {
+  .users .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:480px) {
+  .users .container {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 /*
