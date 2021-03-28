@@ -1,0 +1,13 @@
+* {
+     box-sizing: border-box;
+}
+
+#top {
+     display: flex;
+     justify-content: center;
+}
+
+.rainbow-text {
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
+  color: transparent;
+}
