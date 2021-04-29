@@ -1,13 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Satisfy&display=swap');
+/* @import url("https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"); */
+/* @import url('"https://fonts.googleapis.com/css2?family=Satisfy&display=swap"'); */
+
 * {
      box-sizing: border-box;
+     padding: 0px;
+     margin: 0px;
+     font-family: 'Lato';
 }
 
 #top {
      display: flex;
+     flex-direction: column;
+     align-items:center;
+     justify-content: center;
+     background-color: #192133;
+}
+
+#cong {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 50px;
+}
+
+#giftcard {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     border: none;
+     background-color: rgb(240, 240, 240);
+     margin: 0px 300px 50px 300px;
+     padding: 40px;
+     text-align: center;
+     text-decoration: none;
+     font-size: 30px;
+     border-radius: 50px;
+     user-select: none;
+     outline: none;
+}
+
+#bottom {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     margin-top: 50px;
+     font-size: 30px;
+}
+
+#mobile-verify {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
      justify-content: center;
 }
 
+#phone {
+     background-color: rgb(231, 231, 231);
+     border: none;
+     color: black;
+     padding: 30px;
+     text-align: center;
+     text-decoration: none;
+     font-size: 30px;
+     border-radius: 50px;
+     user-select: none;
+     outline: none;
+     align-items: center;
+}
+
+.note {
+     font-size: 15px;
+     margin: 0px;
+     padding: 0px;
+}
+
+.button {
+     background-color: #1197fb;
+     border: none;
+     color: white;
+     padding: 20px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 30px;
+     margin: 4px 2px;
+     border-radius: 50px;
+     outline: none;
+}
+
+#footer {
+     margin-top: 20px;
+     margin-bottom: 100px;
+     font-size: 15px;
+}
+
 .rainbow-text {
-  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
+  background-image: linear-gradient(to right, indigo, rgb(255, 0, 179), red, orange, yellow);   -webkit-background-clip: text;
   color: transparent;
 }
+
+.gift-text {
+     background-image: linear-gradient(to right, rgb(212, 0, 212), orange, yellow);   -webkit-background-clip: text;
+     color: transparent;
+     margin-top: 30px;
+     font-family: 'Satisfy', cursive;
+     font-size: 50px;
+   }
